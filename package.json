@@ -1,0 +1,49 @@
+{
+  "name": "@dream2023/cypress-solidjs",
+  "version": "0.0.2",
+  "private": false,
+  "description": "Browser-based Component Testing for SolidJS with Cypress.io 🧡",
+  "main": "dist/cypress-solid.cjs.js",
+  "module": "dist/cypress-solid.es.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "cy:open": "cypress open --component",
+    "cy:run": "cypress run --component",
+    "build": "vite build -c vite-build.config.ts",
+    "prepublishOnly": "npm run build && npm run check-ts",
+    "check-ts": "tsc --noEmit",
+    "np":"npm publish --access public --registry https://registry.npmjs.org"
+  },
+  "keywords": [
+    "cypress",
+    "solidjs",
+    "solid",
+    "testing",
+    "component testing"
+  ],
+  "files": [
+    "dist/**/*"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@cypress/mount-utils": "^2.1.0",
+    "@elonehoo/vite-plugin-type-ts": "^0.0.1",
+    "cypress": "^10.11.0",
+    "solid-js": "^1.6.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.2",
+    "vite-plugin-solid": "^2.3.10"
+  },
+  "peerDependencies": {
+    "cypress": ">=10.6.0",
+    "solid-js": ">=1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dream2023/cypress-solidjs.git"
+  },
+  "homepage": "https://github.com/dream2023/cypress-solidjs/#readme"
+}

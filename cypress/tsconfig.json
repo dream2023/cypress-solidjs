@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "./**/*.ts*"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "paths": {
+      "@dream2023/cypress-solidjs": ["../src/index.ts"]
+    }
+  }
+}
