@@ -26,28 +26,4 @@ export function mount(ui: Ui, options: Options = {}) {
   });
 }
 
-export interface UnmountArgs {
-  log: boolean
-  boundComponentMessage?: string
-}
-export function unmount(options: UnmountArgs = { log: true }) {
-  return cy.then(() => {
-    dispose?.()
-
-    if (options.log) {
-      Cypress.log({
-        name: 'unmount',
-        type: 'parent',
-        message: [options.boundComponentMessage ?? 'Unmounted component'],
-        consoleProps: () => {
-          return {
-            description: 'Unmounts Solid component',
-            parent: getContainerEl().parentNode,
-          }
-        },
-      })
-    }
-  })
-}
-
 setupHooks(cleanup);

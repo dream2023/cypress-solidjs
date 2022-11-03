@@ -28,11 +28,6 @@ npx cypress run --component
 
 For more information, please check the official docs for [running Cypress](https://on.cypress.io/guides/getting-started/opening-the-app#Quick-Configuration) and for [component testing](https://on.cypress.io/guides/component-testing/writing-your-first-component-test).
 
-## API
-
-- `mount` is the most important function, allows to mount a given Solid UI component as a mini web application and interact with it using Cypress commands
-- `unmount` removes previously mounted component, mostly useful to test how the component cleans up after itself
-
 ## Example
 
 ```js
