@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: (format) => `cypress-solid.${format}.js`
     },
     rollupOptions: {
-      external: ['solidjs', 'solid-js/web'],
+      external: ['solid-js/web', 'solid-js', 'solid-js/jsx-runtime'],
       output: {}
     }
   }
