@@ -12,6 +12,20 @@ Mount SolidJS components in the open source [Cypress.io](https://www.cypress.io/
 npm install --save-dev @dream2023/cypress-solidjs
 ```
 
+## Usage
+
+```ts
+// cypress.config.ts
+import { defineConfig } from 'cypress'
+export default defineConfig({
+  component: {
+    devServer: {
+      bundler: 'vite',
+    } as any,
+  },
+})
+```
+
 ## Run
 
 Open cypress test runner
