@@ -7,9 +7,9 @@ async function runHookCallback(cb: () => Promise<void> | void) {
   }
 }
 
-import { createRoot } from "solid-js";
+import { createRoot, Owner } from "solid-js";
 
-export function runAsyncHook(cb: () => Promise<void>): Promise<void> {
+export function runAsyncHook(cb: () => Promise<void>, owner?: Owner | undefined | null): Promise<void> {
   return new Promise((resolve, reject) => {
     createRoot(async () => {
       try {
@@ -18,12 +18,12 @@ export function runAsyncHook(cb: () => Promise<void>): Promise<void> {
       } catch (err) {
         reject(err)
       }
-    })
+    }, owner!)
   })
 }
 
-export const runHook = (cb: () => void) => {
+export const runHook = (cb: () => void, owner?: Owner | undefined | null) => {
   createRoot(() => {
     runHookCallback(cb)
-  });
+  }, owner!);
 }
