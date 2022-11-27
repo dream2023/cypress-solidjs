@@ -1,6 +1,6 @@
 {
   "name": "@dream2023/cypress-solidjs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "Browser-based Component Testing for SolidJS with Cypress.io 🧡",
   "main": "dist/cypress-solid.cjs.js",
