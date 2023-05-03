@@ -9,7 +9,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['cjs', 'es'],
-      fileName: (format) => `cypress-solid.${format}.js`
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       external: ['solid-js/web', 'solid-js', 'solid-js/jsx-runtime'],

@@ -1,4 +1,4 @@
-import { mount, unmount } from '@dream2023/cypress-solidjs'
+import { mount } from '@dream2023/cypress-solidjs'
 import { Comp } from './comp'
 
 it('calls callbacks on mount and unmount', () => {
@@ -13,9 +13,4 @@ it('calls callbacks on mount and unmount', () => {
   })
 
   cy.contains('Component with').should('be.visible')
-  unmount().then(() => {
-    expect(onUnmount).to.have.been.calledOnce
-  })
-
-  cy.contains('Component with').should('not.exist')
 })

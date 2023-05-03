@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "declaration": true,
+    "lib": [
+      "ES6"
+    ],
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "types": [
+      "cypress"
+    ],
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/definition.ts"
+  ]
+}

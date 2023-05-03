@@ -5,11 +5,11 @@ Mount SolidJS components in the open source [Cypress.io](https://www.cypress.io/
 ## Install
 
 - Requires SolidJS >= 1
-- Requires Cypress v10.7.0 or later
+- Requires Cypress v12.7.0 or later
 - Requires [Node](https://nodejs.org/en/) version 12 or above
 
 ```sh
-npm install --save-dev @dream2023/cypress-solidjs
+npm install --save-dev cypress @dream2023/cypress-ct-solid-js
 ```
 
 ## Usage
@@ -20,8 +20,9 @@ import { defineConfig } from 'cypress'
 export default defineConfig({
   component: {
     devServer: {
+      framework: '@dream2023/cypress-ct-solid-js',
       bundler: 'vite',
-    } as any,
+    },
   },
 })
 ```
